@@ -1,43 +1,54 @@
 package model;
 
-import model.Dir;
-
+import javax.swing.*;
 import java.awt.*;
 
-public class Tank {
+public class Tank implements Attacked{
     private int x;
     private int y;
-    private int speed;
     private int dir;
+    private int hp;
+    private int bulletType;
+    private int fireGap;    // 开火间隔
+    private int tankType;
+    private boolean isAlive;
+    private int speed;
+    private long lastFireTime;  // 上次开火的时间
 
-    public Tank(int speed){
+    public Tank(int tankType){
         this.x = 200;
         this.y = 200;
-        this.dir = Dir.UP;
-        this.speed = speed;
+        this.speed = Const.NOR_SPEED;
+        this.bulletType = Const.BULLET_NOR;
     }
 
     public void move(){
         switch (this.dir){
-            case Dir.UP:
+            case Const.UP:
                 this.setY(this.getY()-speed);
                 break;
-            case Dir.down:
+            case Const.DOWN:
                 this.setY(this.getY()+speed);
                 break;
-            case Dir.left:
+            case Const.LEFT:
                 this.setX(this.getX()-speed);
                 break;
-            case Dir.right:
+            case Const.RIGHT:
                 this.setX(this.getX()+speed);
                 break;
         }
     }
 
-    public void draw(Graphics g){
-        g.setColor(Color.red);
-        g.drawLine(200, 200, 100, 100);
-        g.fillRect(this.getX(), this.getY(), 200, 200);
+    public void fire(){
+        long t = System.currentTimeMillis();    // 此时时间
+        if(t-this.getLastFireTime() >= fireGap){
+
+            this.setLastFireTime(t);
+        }
+    }
+
+    public void draw(Graphics g, JPanel father){
+
     }
 
     public int getX() {
@@ -70,5 +81,63 @@ public class Tank {
 
     public void setDir(int dir) {
         this.dir = dir;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public void sethp(int hp) {
+        if(hp < 0) {
+            this.hp = 0;
+            this.setAlive(false);
+        }else {
+            this.hp = hp;
+        }
+    }
+
+    public int getBulletType() {
+        return bulletType;
+    }
+
+    public void setBulletType(int bulletType) {
+        this.bulletType = bulletType;
+    }
+
+    public int getFireGap() {
+        return fireGap;
+    }
+
+    public void setFireGap(int fireGap) {
+        this.fireGap = fireGap;
+    }
+
+    public int getTankType() {
+        return tankType;
+    }
+
+    public void setTankType(int tankType) {
+        this.tankType = tankType;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
+    }
+
+    public void setAlive(boolean alive) {
+        isAlive = alive;
+    }
+
+    public long getLastFireTime() {
+        return lastFireTime;
+    }
+
+    public void setLastFireTime(long lastFireTime) {
+        this.lastFireTime = lastFireTime;
+    }
+
+    @Override
+    public void beAttacked(int damage) {
+        this.sethp(this.getHp()-damage);
     }
 }

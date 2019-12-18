@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/Attacked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/CollDete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Const.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/EnemyTank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PlayerTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanktest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tanktest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Dir.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Tank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,7 +32,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UylroLxd99FQbxX9Tc6IJFAsXZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,7 +49,13 @@
   <component name="RunManager">
     <configuration name="GameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.GameFrame" />
-      <module name="TestTank" />
+      <module name="Tanktest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,37 +93,66 @@
       <workItem from="1576648487536" duration="1320000" />
       <workItem from="1576666145476" duration="1258000" />
       <workItem from="1576667548253" duration="919000" />
+      <workItem from="1576671244174" duration="2841000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建工程" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建工程" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1576649689160">
+    <state x="216" y="62" key="#GameFrame" timestamp="1576671096829">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1576649689160" />
+    <state x="216" y="62" key="#GameFrame/0.0.1536.834@0.0.1536.834" timestamp="1576671096829" />
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576671135903">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1576671135903" />
+    <state x="295" y="135" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1576671087624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="295" y="135" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.834@0.0.1536.834" timestamp="1576671087624" />
+    <state x="574" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1576672517277">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1576672517277" />
+    <state x="231" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576670982604">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="231" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1576670982604" />
+    <state x="607" y="306" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576670535457">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="607" y="306" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834@0.0.1536.834" timestamp="1576670535457" />
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576648644287">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1576648644287" />
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1576668701780">
+    <state x="370" y="0" key="CommitChangelistDialog2" timestamp="1576674196043">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576668701780" />
-    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1576668701780">
+    <state x="370" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1576674196043" />
+    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1576674136401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576668701780" />
-    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1576668701780">
+    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
+    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1576674136401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576668701780" />
-    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1576668701780">
+    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
+    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1576674136401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576668701780" />
+    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
+    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1576674136401">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
     <state x="430" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1576667553615">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
