@@ -37,7 +37,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GameFrame (1)">
+    <configuration name="GameFrame (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameFrame" />
+      <module name="TestTank" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.GameFrame" />
       <module name="TestTank" />
@@ -47,6 +54,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameFrame (1)" />
         <item itemvalue="Application.GameFrame" />
       </list>
     </recent_temporary>
@@ -77,12 +85,23 @@
       <workItem from="1576393330238" duration="3335000" />
       <workItem from="1576648487536" duration="1320000" />
       <workItem from="1576666145476" duration="1258000" />
-      <workItem from="1576667548253" duration="1258000" />
+      <workItem from="1576667548253" duration="1736000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -96,22 +115,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1576648644287" />
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1576668783931">
+    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1576669062460">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576668783931" />
-    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1576668783931">
+    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576669062460" />
+    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1576669062460">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576668783931" />
-    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1576668783931">
+    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576669062460" />
+    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1576669062460">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576668783931" />
-    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1576668783931">
+    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576669062460" />
+    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1576669062460">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576668783931" />
+    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576669062460" />
     <state x="470" y="123" key="MultipleFileMergeDialog" timestamp="1576668916090">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
