@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/Attacked.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/CollDete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Const.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/EnemyTank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/PlayerTank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanktest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tanktest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dir.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EnemyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/EnemyTank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UylroLxd99FQbxX9Tc6IJFAsXZ" />
@@ -137,22 +132,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="370" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1576674196043" />
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1576674136401">
+    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1576674354577">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
-    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1576674136401">
+    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576674354577" />
+    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1576674354577">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
-    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1576674136401">
+    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576674354577" />
+    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1576674354577">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
-    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1576674136401">
+    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576674354577" />
+    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1576674354577">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576674136401" />
+    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576674354577" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1576674316974">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1576674316974" />
     <state x="430" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1576667553615">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
