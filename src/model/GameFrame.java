@@ -1,26 +1,17 @@
+package model;
+
 import javax.swing.*;
-import java.awt.*;
 
 public class GameFrame extends JFrame {
-    private Tank playerTank;
-    private JPanel panel;
+    private JPanel panel = null;
     public GameFrame(){
         setTitle("Tank game");
         setSize(1000, 800);
-        this.playerTank = new Tank(20);
-        panel = new JPanel();
+        panel = new MyPanel();
         this.getContentPane().add(panel);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
-
-
-    //    @Override
-//    public void paint(Graphics g) {
-//        //super.paint(g);
-//        this.playerTank.draw(g);
-//    }
-
 
     public static void main(String[] args) {
         GameFrame win = new GameFrame();

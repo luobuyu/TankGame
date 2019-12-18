@@ -1,3 +1,7 @@
+package model;
+
+import model.Dir;
+
 import java.awt.*;
 
 public class Tank {
