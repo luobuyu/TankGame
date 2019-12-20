@@ -3,7 +3,7 @@ package model;
 public class Const {
     public final static int WIN_WIDTH = 1000;
     public final static int WIN_HEIGHT = 800;
-    public final static int NOR_SPEED = 5;
+    public final static int NOR_SPEED = 1;
     public final static int BULLET_NOR = 1;
     public final static int BULLET_ICE = 2;
 
