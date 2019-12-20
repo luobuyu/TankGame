@@ -6,7 +6,6 @@ import java.awt.event.KeyListener;
 
 public class GameFrame extends JFrame {
     private MyPanel gamePanel = null;
-
     public GameFrame(){
         setTitle("Tank game");
         setSize(Const.WIN_WIDTH, Const.WIN_HEIGHT);
@@ -63,17 +62,29 @@ public class GameFrame extends JFrame {
                     player.setMoving(false);
                     return;
                 }else {
+                    // 如果开火间隔达不到直接return
                     if(up) player.setDir(Const.UP);
                     if(down) player.setDir(Const.DOWN);
                     if(right) player.setDir(Const.RIGHT);
                     if(left) player.setDir(Const.LEFT);
                     player.setMoving(true);
                 }
-
             }
 
         });
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    /**
+     * get and set
+     * @return 成员
+     */
+    public MyPanel getGamePanel() {
+        return gamePanel;
+    }
+
+    public void setGamePanel(MyPanel gamePanel) {
+        this.gamePanel = gamePanel;
     }
 
     public static void main(String[] args) {

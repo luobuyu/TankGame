@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class PlayerTank extends Tank{
     private boolean moving;
+    private String[][] pictImg;
 
     public PlayerTank(int tankType) {
         super(tankType);
@@ -12,11 +13,19 @@ public class PlayerTank extends Tank{
         this.setY(600);
         this.setDir(Const.UP);
         this.setMoving(false);
+        this.setMoveGap(Const.Player_Move_gap);
+//        this.pictImg = new String[][]{{Const.PlayerTank_IMG_UP1, Const.PlayerTank_IMG_UP2},
+//                {Const.PlayerTank_IMG_RIGHT1, Const.PlayerTank_IMG_RIGHT2},
+//                {Const.PlayerTank_IMG_DOWN1, Const.PlayerTank_IMG_DOWN2},
+//                {Const.PlayerTank_IMG_LEFT1, Const.PlayerTank_IMG_LEFT2}
+//        };
     }
 
     @Override
     public void draw(Graphics g, JPanel father) {
         String path = null;
+//        int index = 0;
+//        long currTime = System.currentTimeMillis();
         switch (this.getDir()){
             case Const.UP:
                 path = Const.PlayerTank_IMG_UP;

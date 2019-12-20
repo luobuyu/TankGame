@@ -14,12 +14,16 @@ public class Tank implements Attacked{
     private boolean isAlive;
     private int speed;
     private long lastFireTime;  // 上次开火的时间
+    private long lastMoveTime;
+    private int moveGap;
 
     public Tank(int tankType){
         this.x = 200;
         this.y = 200;
         this.speed = Const.NOR_SPEED;
         this.bulletType = Const.BULLET_NOR;
+        this.lastFireTime = System.currentTimeMillis();
+        this.lastMoveTime = System.currentTimeMillis();
     }
 
     public void move(){
@@ -87,13 +91,29 @@ public class Tank implements Attacked{
         return hp;
     }
 
-    public void sethp(int hp) {
+    public void setHp(int hp) {
         if(hp < 0) {
             this.hp = 0;
             this.setAlive(false);
         }else {
             this.hp = hp;
         }
+    }
+
+    public long getLastMoveTime() {
+        return lastMoveTime;
+    }
+
+    public void setLastMoveTime(long lastMoveTime) {
+        this.lastMoveTime = lastMoveTime;
+    }
+
+    public int getMoveGap() {
+        return moveGap;
+    }
+
+    public void setMoveGap(int moveGap) {
+        this.moveGap = moveGap;
     }
 
     public int getBulletType() {
@@ -138,6 +158,6 @@ public class Tank implements Attacked{
 
     @Override
     public void beAttacked(int damage) {
-        this.sethp(this.getHp()-damage);
+        this.setHp(this.getHp()-damage);
     }
 }
