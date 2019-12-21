@@ -12,6 +12,9 @@ public class Const {
     public final static int PLAYER = 1;
     public final static int ENEMY = 1;
     public final static int TankWidth = 60;
+    public final static int width = 20;
+    public final static int mapWidth = 50;
+    public final static int mapHeight = 40;
 
     public final static String PlayerTank_IMG_UP = "pictures/tank/MyTank_up.png";
     public final static String PlayerTank_IMG_DOWN = "pictures/tank/MyTank_down.png";
@@ -37,4 +40,12 @@ public class Const {
     //public final static int Put_Img_Gap = 1000;
     public final static int NOR_SPEED = 2;
     public final static int INC_SPEED = 3;
+
+
+    // 障碍物
+    public final static int none = 0;
+    public final static int grass = 1;
+    public final static int brick = 2;
+    public final static int steel = 3;
+    public final static int home = 4;
 }
