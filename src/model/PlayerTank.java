@@ -5,18 +5,15 @@ import java.awt.*;
 
 public class PlayerTank extends Tank{
     private boolean moving;
+    private MyPanel father;
 
-    private String[][] pictImg;
-
-    public PlayerTank(int tankType) {
+    public PlayerTank(int tankType, MyPanel father) {
         super(tankType);
-        this.setX(400);
-        this.setY(740);
+        this.setX(17*Const.width);
+        this.setY(37*Const.width);
         this.setDir(Const.UP);
         this.setMoving(false);
-        this.setMoveGap(Const.Player_Move_gap);
-
-
+        this.setFather(father);
 //        this.pictImg = new String[][]{{Const.PlayerTank_IMG_UP1, Const.PlayerTank_IMG_UP2},
 //                {Const.PlayerTank_IMG_RIGHT1, Const.PlayerTank_IMG_RIGHT2},
 //                {Const.PlayerTank_IMG_DOWN1, Const.PlayerTank_IMG_DOWN2},
@@ -45,7 +42,7 @@ public class PlayerTank extends Tank{
             default:
                 break;
         }
-        g.drawImage(Toolkit.getDefaultToolkit().getImage(path), this.getX(), this.getY(), Const.TankWidth, Const.TankWidth, father);
+        g.drawImage(Toolkit.getDefaultToolkit().getImage(path), this.getX(), this.getY(), Const.TankWidth, Const.TankWidth, this.getFather());
     }
 
     @Override
@@ -69,8 +66,8 @@ public class PlayerTank extends Tank{
     }
 
     public boolean canMove(){
-        int newX = 0;
-        int newY = 0;
+        int newX = this.getX();
+        int newY = this.getY();
         switch (this.getDir()){
             case Const.UP:
                 newY = this.getY()-this.getSpeed();
@@ -85,9 +82,23 @@ public class PlayerTank extends Tank{
                 newX = this.getX()+this.getSpeed();
                 break;
         }
-        if(newX<0||newY<0||newX>940||newY>740){
+
+        // 如果超出边界
+        if(CollDete.isBeyondBorder(newX, newY, Const.TankWidth)){
             return false;
         }
+
+        // 如果和障碍物碰撞
+        for(Barrier barrier: this.getFather().getBarriers()){
+            if(barrier.getType()>Const.canMove){
+                if(CollDete.isCollide(newX, newY, Const.TankWidth, barrier.getX(), barrier.getY(), Const.width)){
+                    return false;
+                }
+            }
+        }
+//        if(newX<0||newY<0||newX>Const.WIN_WIDTH - Const.TankWidth||newY>Const.WIN_HEIGHT-Const.TankWidth){
+//            return false;
+//        }
         return true;
     }
 
@@ -97,5 +108,13 @@ public class PlayerTank extends Tank{
 
     public void setMoving(boolean moving) {
         this.moving = moving;
+    }
+
+    public MyPanel getFather() {
+        return father;
+    }
+
+    public void setFather(MyPanel father) {
+        this.father = father;
     }
 }
