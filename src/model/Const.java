@@ -38,7 +38,7 @@ public class Const {
 
     public final static int Player_Move_gap = 5;
     //public final static int Put_Img_Gap = 1000;
-    public final static int NOR_SPEED = 2;
+    public final static int NOR_SPEED = 5;
     public final static int INC_SPEED = 3;
 
 

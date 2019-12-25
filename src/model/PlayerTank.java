@@ -5,15 +5,18 @@ import java.awt.*;
 
 public class PlayerTank extends Tank{
     private boolean moving;
+
     private String[][] pictImg;
 
     public PlayerTank(int tankType) {
         super(tankType);
         this.setX(400);
-        this.setY(600);
+        this.setY(740);
         this.setDir(Const.UP);
         this.setMoving(false);
         this.setMoveGap(Const.Player_Move_gap);
+
+
 //        this.pictImg = new String[][]{{Const.PlayerTank_IMG_UP1, Const.PlayerTank_IMG_UP2},
 //                {Const.PlayerTank_IMG_RIGHT1, Const.PlayerTank_IMG_RIGHT2},
 //                {Const.PlayerTank_IMG_DOWN1, Const.PlayerTank_IMG_DOWN2},
@@ -47,7 +50,7 @@ public class PlayerTank extends Tank{
 
     @Override
     public void move() {
-        if(this.isMoving()){
+        if(this.isMoving()&&canMove()){
             switch (this.getDir()){
                 case Const.UP:
                     this.setY(this.getY()-this.getSpeed());
@@ -63,6 +66,29 @@ public class PlayerTank extends Tank{
                     break;
             }
         }
+    }
+
+    public boolean canMove(){
+        int newX = 0;
+        int newY = 0;
+        switch (this.getDir()){
+            case Const.UP:
+                newY = this.getY()-this.getSpeed();
+                break;
+            case Const.DOWN:
+                newY = this.getY()+this.getSpeed();
+                break;
+            case Const.LEFT:
+                newX = this.getX()-this.getSpeed();
+                break;
+            case Const.RIGHT:
+                newX = this.getX()+this.getSpeed();
+                break;
+        }
+        if(newX<0||newY<0||newX>940||newY>740){
+            return false;
+        }
+        return true;
     }
 
     public boolean isMoving() {

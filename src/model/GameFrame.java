@@ -1,6 +1,7 @@
 package model;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -8,9 +9,14 @@ public class GameFrame extends JFrame {
     private MyPanel gamePanel = null;
     public GameFrame(){
         setTitle("Tank game");
-        setSize(Const.WIN_WIDTH, Const.WIN_HEIGHT);
+        this.setSize(Const.WIN_WIDTH+15, Const.WIN_HEIGHT+38);
+        this.setLayout(null);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setResizable(false);
         gamePanel = new MyPanel();
         this.getContentPane().add(gamePanel);
+        this.setVisible(true);
         this.addKeyListener(new KeyListener() {
             boolean up = false, down = false, left = false, right = false;
             @Override
@@ -72,7 +78,7 @@ public class GameFrame extends JFrame {
             }
 
         });
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
     }
 
     /**
@@ -89,6 +95,5 @@ public class GameFrame extends JFrame {
 
     public static void main(String[] args) {
         GameFrame win = new GameFrame();
-        win.setVisible(true);
     }
 }

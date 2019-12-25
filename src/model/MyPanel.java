@@ -11,13 +11,31 @@ public class MyPanel extends JPanel {
     private long curTime;
     private Vector<Barrier> barriers;
     private int curLevel;
+    private Thread rePaintThread = null;
     public MyPanel(){
+        this.setSize(Const.WIN_WIDTH, Const.WIN_HEIGHT);
         tanks = new Vector<Tank>();
         tanks.add(new PlayerTank(Const.PLAYER));
-        curLevel = 1;
+        curLevel = 2;
         this.barriers = Barrier.readMap(curLevel);
 //        enemyTanks = new Vector<EnemyTank>();
 //        playerTank = new PlayerTank(Const.PLAYER);
+        rePaintThread = new Thread(){
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        Thread.sleep(30);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    repaint();
+                }
+
+            }
+        };
+
+        rePaintThread.start();
     }
 
 
@@ -28,7 +46,6 @@ public class MyPanel extends JPanel {
         for (Barrier barrier: barriers){
             barrier.draw(g, this);
         }
-
         // 画坦克
         for (Tank tank: tanks){
             tank.draw(g, this);
@@ -38,7 +55,6 @@ public class MyPanel extends JPanel {
                 tank.setLastMoveTime(curTime);
             }
         }
-        repaint();
     }
 
 //    void

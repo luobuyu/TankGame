@@ -3,7 +3,6 @@ package model;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import java.nio.CharBuffer;
 import java.util.Vector;
 
 public class Barrier {
@@ -31,13 +30,11 @@ public class Barrier {
         try {
             reader = new BufferedReader(new FileReader(new File(path)));
             while ((line = reader.readLine()) != null) {
-                System.out.println(111111);
                 for (int j = 0; j < line.length(); j++) {
 
                     if (line.charAt(j) > '0' && line.charAt(j) < '9') {
                         switch (line.charAt(j)) {
                             case '2':
-                                System.out.println(row+"    "+j);
                                 barriers.add(new Barrier(Const.grass, j * Const.width, row * Const.width, Const.width));
                                 break;
                             case '3':
@@ -111,4 +108,11 @@ public class Barrier {
     public void setWidth(int width) {
         this.width = width;
     }
+
+    public static void main(String[] args) {
+        for (Barrier barrier: Barrier.readMap(1)){
+            System.out.println(barrier.getX() + "   "+ barrier.getY());
+        }
+    }
+
 }
