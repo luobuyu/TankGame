@@ -10,12 +10,14 @@ public class Barrier {
     private int x;
     private int y;
     private int width;
+    private boolean alive;
 
     public Barrier(int type, int x, int y, int width) {
         this.type = type;
         this.x = x;
         this.y = y;
         this.width = width;
+        this.alive = true;
     }
 
 

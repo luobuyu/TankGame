@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="">
+    <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="贴图完美，碰撞检测加入完美">
+      <change afterPath="$PROJECT_DIR$/src/model/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Barrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Barrier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/CollDete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/CollDete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Const.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/PlayerTank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/PlayerTank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Tank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Barrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Barrier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +153,7 @@
       <workItem from="1577075382404" duration="2331000" />
       <workItem from="1577249538857" duration="3764000" />
       <workItem from="1577285089024" duration="4565000" />
-      <workItem from="1578065006796" duration="407000" />
+      <workItem from="1578065006796" duration="2387000" />
     </task>
     <task id="LOCAL-00001" summary="敌军坦克类">
       <created>1576674372340</created>
@@ -247,10 +243,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="295" y="135" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.834@0.0.1536.834" timestamp="1576671087624" />
-    <state x="574" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1577286165550">
+    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1578067229210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1577286165550" />
+    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1578067229210" />
     <state x="231" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576670982604">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -323,10 +319,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="561" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1576838427167" />
-    <state x="499" y="186" key="extract.method.dialog" timestamp="1577252815562">
+    <state x="499" y="186" key="extract.method.dialog" timestamp="1578066931106">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="186" key="extract.method.dialog/0.0.1536.834@0.0.1536.834" timestamp="1577252815562" />
+    <state x="499" y="186" key="extract.method.dialog/0.0.1536.834@0.0.1536.834" timestamp="1578066931106" />
     <state x="437" y="0" width="662" height="834" key="find.popup" timestamp="1577288513623">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
