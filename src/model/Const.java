@@ -36,7 +36,9 @@ public class Const {
     //public final static int Put_Img_Gap = 1000;
     public final static int NOR_SPEED = 5;
     public final static int INC_SPEED = 3;
-
+    public final static int MAX_HP = 100;
+    public final static int NOR_DAMAGE = 20;
+    public final static int DAMAGE_RAND = 10;
 
     // 障碍物
     public final static int none = 0;

@@ -18,7 +18,7 @@ public class CollDete {
      * @return 如果超出边界true， 否则 false
      */
     public static boolean isBeyondBorder(int x, int y, int width){
-        return x < 0 || y < 0 || x > Const.WIN_WIDTH-Const.TankWidth || y > Const.WIN_HEIGHT-Const.TankWidth;
+        return x < 0 || y < 0 || x > Const.WIN_WIDTH-width || y > Const.WIN_HEIGHT-width;
     }
 
 }

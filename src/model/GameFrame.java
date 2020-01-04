@@ -39,6 +39,9 @@ public class GameFrame extends JFrame {
                     case KeyEvent.VK_LEFT:
                         left = true;
                         break;
+                    case KeyEvent.VK_SPACE:
+                        gamePanel.getTanks().get(0).fire();
+                        break;
                 }
                 setCurDir();
             }

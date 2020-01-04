@@ -111,6 +111,14 @@ public class Barrier {
         this.width = width;
     }
 
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
     public static void main(String[] args) {
         for (Barrier barrier: Barrier.readMap(1)){
             System.out.println(barrier.getX() + "   "+ barrier.getY());

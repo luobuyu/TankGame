@@ -1,5 +1,8 @@
 package model;
 
+import java.awt.*;
+import java.util.Random;
+
 public class Bullet {
 
     private int x;      // 像素点
@@ -12,15 +15,15 @@ public class Bullet {
     private boolean alive; // 是否存在， 如果是 false则播放爆炸图片
     private MyPanel father;
 
-    public Bullet(int x, int y, int damage, int dir, int bulletType, int speed, int belongTo, MyPanel father) {
+    public Bullet(int x, int y, int dir, int damage, int bulletType, int speed, int belongTo, MyPanel father) {
         this.x = x;
         this.y = y;
-        this.damage = damage;
+        this.damage = new Random().nextInt(Const.DAMAGE_RAND)+damage;
         this.dir = dir;
         this.bulletType = bulletType;
         this.speed = speed;
         this.belongTo = belongTo;
-        this.alive = false;
+        this.alive = true;
         this.father = father;
     }
 
@@ -65,21 +68,55 @@ public class Bullet {
                 break;
         }
         // 如果超出边界
-        if(CollDete.isBeyondBorder(newX, newY, Const.TankWidth)){
-            this.setAlive(true);
+        if(CollDete.isBeyondBorder(newX, newY, Const.width)){
+            this.setAlive(false);
             return false;
         }
 
         // 如果和障碍物碰撞
         for(Barrier barrier: this.getFather().getBarriers()){
             if(barrier.getType()>Const.canMove){
-                if(CollDete.isCollide(newX, newY, Const.TankWidth, barrier.getX(), barrier.getY(), Const.width)){
-                    this.setAlive(true);
+                if(CollDete.isCollide(newX, newY, Const.width, barrier.getX(), barrier.getY(), Const.width)){
+                    if (barrier.getType()==Const.brick||barrier.getType()==Const.home){
+                        barrier.setAlive(false);
+                    }
+                    this.setAlive(false);
                     return false;
                 }
             }
         }
-        return false;
+        // 如果和子弹碰撞
+        for (Bullet bullet: this.getFather().getBullets()){
+            if(bullet.getBelongTo()!=this.getBulletType()){
+                if(CollDete.isCollide(newX, newY, Const.width, bullet.getX(), bullet.getY(), Const.width)){
+                    bullet.setAlive(false);
+                    this.setAlive(false);
+                    return false;
+                }
+            }
+        }
+        // 如果和坦克碰撞
+        for (Tank tank: this.getFather().getTanks()){
+            if(tank.getTankType()!=this.getBelongTo()){
+                if(CollDete.isCollide(newX, newY, Const.width, tank.getX(), tank.getY(), Const.TankWidth)){
+                    tank.beAttacked(this.getDamage());
+                    System.out.println("被攻击了"+this.getDamage());
+                    this.setAlive(false);
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public void draw(Graphics g){
+        String path = null;
+        if(this.getBulletType()==Const.BULLET_NOR){
+            path = "pictures/bullet/Bullet.png";
+        }else {
+            path = "pictures/bullet/IceBullet.png";
+        }
+        g.drawImage(Toolkit.getDefaultToolkit().getImage(path), this.getX(), this.getY(), Const.width, Const.width, this.getFather());
     }
 
     public int getX() {

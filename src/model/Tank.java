@@ -15,13 +15,15 @@ public class Tank implements Attacked{
     private int speed;
     private long lastFireTime;  // 上次开火的时间
 
-    public Tank(int tankType){
-        this.x = 200;
-        this.y = 200;
-        this.speed = Const.NOR_SPEED;
-        this.bulletType = Const.BULLET_NOR;
+    // 传入的是 敌人 、 玩家
+    public Tank(){
+//        this.speed = Const.NOR_SPEED;
+//        this.bulletType = Const.BULLET_NOR;
+        this.hp = Const.MAX_HP;
+        this.isAlive = true;
         this.lastFireTime = System.currentTimeMillis();
     }
+
 
     public void move(){
         switch (this.dir){
@@ -48,7 +50,7 @@ public class Tank implements Attacked{
         }
     }
 
-    public void draw(Graphics g, JPanel father){
+    public void draw(Graphics g){
 
     }
 

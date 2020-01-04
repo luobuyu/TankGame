@@ -8,12 +8,16 @@ public class PlayerTank extends Tank{
     private MyPanel father;
 
     public PlayerTank(int tankType, MyPanel father) {
-        super(tankType);
+        super();
         this.setX(17*Const.width);
         this.setY(37*Const.width);
         this.setDir(Const.UP);
         this.setMoving(false);
         this.setFather(father);
+        this.setSpeed(Const.NOR_SPEED);
+        this.setFireGap(200);
+        this.setBulletType(Const.BULLET_NOR);
+        this.setTankType(tankType);
 //        this.pictImg = new String[][]{{Const.PlayerTank_IMG_UP1, Const.PlayerTank_IMG_UP2},
 //                {Const.PlayerTank_IMG_RIGHT1, Const.PlayerTank_IMG_RIGHT2},
 //                {Const.PlayerTank_IMG_DOWN1, Const.PlayerTank_IMG_DOWN2},
@@ -22,7 +26,7 @@ public class PlayerTank extends Tank{
     }
 
     @Override
-    public void draw(Graphics g, JPanel father) {
+    public void draw(Graphics g) {
         String path = null;
 //        int index = 0;
 //        long currTime = System.currentTimeMillis();
@@ -100,6 +104,35 @@ public class PlayerTank extends Tank{
 //            return false;
 //        }
         return true;
+    }
+
+    @Override
+    public void fire() {
+        long t = System.currentTimeMillis();
+        if(t-this.getLastFireTime()>this.getFireGap()){
+            int x = this.getX();
+            int y = this.getY();
+            switch (this.getDir()){
+                case Const.UP:
+                    x += Const.width;
+                    y -= Const.width;
+                    break;
+                case Const.DOWN:
+                    x += Const.width;
+                    y += Const.TankWidth;
+                    break;
+                case Const.RIGHT:
+                    x += Const.TankWidth;
+                    y += Const.width;
+                    break;
+                case Const.LEFT:
+                    x -= Const.width;
+                    y += Const.width;
+                    break;
+            }
+            this.getFather().getBullets().add(new Bullet(x, y, this.getDir(), Const.NOR_DAMAGE, this.getBulletType(), 7, Const.PLAYER, this.getFather()));
+            this.setLastFireTime(t);
+        }
     }
 
     public boolean isMoving() {
