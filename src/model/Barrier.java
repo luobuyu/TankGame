@@ -11,21 +11,23 @@ public class Barrier {
     private int y;
     private int width;
     private boolean alive;
+    private MyPanel father;
 
-    public Barrier(int type, int x, int y, int width) {
+    public Barrier(int type, int x, int y, int width, MyPanel father) {
         this.type = type;
         this.x = x;
         this.y = y;
         this.width = width;
         this.alive = true;
+        this.father = father;
     }
 
 
-    public static Vector<Barrier> readMap(int i) {
+    public static Vector<Barrier> readMap(int i, MyPanel father) {
         // 23*20
         String path = "map/map" + i + ".txt";
         Vector<Barrier> barriers = new Vector<Barrier>();
-        barriers.add(new Barrier(Const.home, 23 * Const.width, 37 * Const.width, Const.TankWidth));
+        barriers.add(new Barrier(Const.home, 23 * Const.width, 37 * Const.width, Const.TankWidth, father));
         BufferedReader reader = null;
         int row = 0;
         String line;
@@ -37,13 +39,13 @@ public class Barrier {
                     if (line.charAt(j) > '0' && line.charAt(j) < '9') {
                         switch (line.charAt(j)) {
                             case '2':
-                                barriers.add(new Barrier(Const.grass, j * Const.width, row * Const.width, Const.width));
+                                barriers.add(new Barrier(Const.grass, j * Const.width, row * Const.width, Const.width, father));
                                 break;
                             case '3':
-                                barriers.add(new Barrier(Const.brick, j * Const.width, row * Const.width, Const.width));
+                                barriers.add(new Barrier(Const.brick, j * Const.width, row * Const.width, Const.width, father));
                                 break;
                             case '4':
-                                barriers.add(new Barrier(Const.steel, j * Const.width, row * Const.width, Const.width));
+                                barriers.add(new Barrier(Const.steel, j * Const.width, row * Const.width, Const.width, father));
                                 break;
                             default:
                                 break;
@@ -115,14 +117,16 @@ public class Barrier {
         return alive;
     }
 
-    public void setAlive(boolean alive) {
-        this.alive = alive;
+    public MyPanel getFather() {
+        return father;
     }
 
-    public static void main(String[] args) {
-        for (Barrier barrier: Barrier.readMap(1)){
-            System.out.println(barrier.getX() + "   "+ barrier.getY());
-        }
+    public void setFather(MyPanel father) {
+        this.father = father;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 
 }

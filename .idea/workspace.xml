@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="">
+    <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="添加子弹类，还在写，还未完成">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Explosion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Barrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Barrier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Bullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Const.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/EnemyTank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/EnemyTank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/PlayerTank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/PlayerTank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Tank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Barrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Barrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Bullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CollDete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CollDete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Const.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/EnemyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/EnemyTank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlayerTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PlayerTank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +57,24 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Candela" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TankGame" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\JavaProject\Tanktest" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\JavaProject\Tanktest\pictures\tank" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaProject\Tanktest" />
       <recent name="E:\JavaProject\Tanktest\pictures\tank" />
     </key>
   </component>
@@ -79,6 +94,19 @@
     </configuration>
     <configuration name="CollDete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.CollDete" />
+      <module name="Tanktest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnemyTank" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.EnemyTank" />
       <module name="Tanktest" />
       <extension name="coverage">
         <pattern>
@@ -119,8 +147,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameFrame" />
-        <item itemvalue="Application.CollDete" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.EnemyTank" />
+        <item itemvalue="Application.CollDete" />
         <item itemvalue="Application.Barrier" />
       </list>
     </recent_temporary>
@@ -162,7 +191,18 @@
       <workItem from="1577249538857" duration="3764000" />
       <workItem from="1577285089024" duration="4565000" />
       <workItem from="1578065006796" duration="2443000" />
-      <workItem from="1578121358680" duration="9788000" />
+      <workItem from="1578121358680" duration="9960000" />
+      <workItem from="1578365008518" duration="2633000" />
+      <workItem from="1578549802859" duration="6728000" />
+      <workItem from="1578558605125" duration="20657000" />
+      <workItem from="1578626345731" duration="30389000" />
+      <workItem from="1579875148565" duration="599000" />
+      <workItem from="1580270310478" duration="123000" />
+      <workItem from="1580285717434" duration="274000" />
+      <workItem from="1580352997637" duration="16428000" />
+      <workItem from="1580446031585" duration="835000" />
+      <workItem from="1580452311656" duration="9089000" />
+      <workItem from="1580528074365" duration="4136000" />
     </task>
     <task id="LOCAL-00001" summary="敌军坦克类">
       <created>1576674372340</created>
@@ -252,6 +292,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" key="#Images/0.0.1536.834@0.0.1536.834" timestamp="1576856639375" />
+    <state x="361" y="76" key="#Inspections" timestamp="1578573465541">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="76" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1578573465541" />
     <state x="361" y="76" key="#Project_Structure" timestamp="1578131196458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -264,10 +308,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="295" y="135" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.834@0.0.1536.834" timestamp="1576671087624" />
-    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1578124955806">
+    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1580531070181">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1578124955806" />
+    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1580531070181" />
     <state x="231" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576670982604">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -280,50 +324,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1576648644287" />
-    <state x="370" y="0" key="CommitChangelistDialog2" timestamp="1578067435448">
+    <state x="508" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1578672288296">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="370" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1578067435448" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1576942400149">
+    <state x="508" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.834@0.0.1536.834" timestamp="1578672288296" />
+    <state x="370" y="0" key="CommitChangelistDialog2" timestamp="1578372860695">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1576942400149" />
-    <state width="1493" height="276" key="GridCell.Tab.0.bottom" timestamp="1578131151741">
+    <state x="370" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1578372860695" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1578572979839">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1578131151741" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1578572979839" />
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1580539243073">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
     <state width="1877" height="138" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="276" key="GridCell.Tab.0.center" timestamp="1578131151741">
+    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1580539243073">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1578131151741" />
+    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
     <state width="1877" height="138" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="276" key="GridCell.Tab.0.left" timestamp="1578131151741">
+    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1580539243073">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1578131151741" />
+    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
     <state width="1877" height="138" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="276" key="GridCell.Tab.0.right" timestamp="1578131151741">
+    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1580539243073">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1578131151741" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
     <state width="1877" height="138" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="243" key="GridCell.Tab.1.bottom" timestamp="1578127526269">
+    <state width="1493" height="286" key="GridCell.Tab.1.bottom" timestamp="1580393484407">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1578127526269" />
-    <state width="1493" height="243" key="GridCell.Tab.1.center" timestamp="1578127526269">
+    <state width="1493" height="286" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
+    <state width="1493" height="286" key="GridCell.Tab.1.center" timestamp="1580393484407">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1578127526269" />
-    <state width="1493" height="243" key="GridCell.Tab.1.left" timestamp="1578127526269">
+    <state width="1493" height="286" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
+    <state width="1493" height="286" key="GridCell.Tab.1.left" timestamp="1580393484407">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1578127526269" />
-    <state width="1493" height="243" key="GridCell.Tab.1.right" timestamp="1578127526269">
+    <state width="1493" height="286" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
+    <state width="1493" height="286" key="GridCell.Tab.1.right" timestamp="1580393484407">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1578127526269" />
+    <state width="1493" height="286" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1576835459794">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -332,14 +380,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1578067446379" />
-    <state x="394" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1578121360205">
+    <state x="394" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1580539169832">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="394" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1578121360205" />
+    <state x="394" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1580539169832" />
     <state x="561" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576838427167">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="561" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1576838427167" />
+    <state x="93" y="93" width="1350" height="648" key="dock-window-1" timestamp="1578554966423">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="dock-window-1/0.0.1536.834@0.0.1536.834" timestamp="1578554966423" />
+    <state x="93" y="93" width="1350" height="648" key="dock-window-2" timestamp="1578554966423">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="dock-window-2/0.0.1536.834@0.0.1536.834" timestamp="1578554966423" />
     <state x="499" y="186" key="extract.method.dialog" timestamp="1578066931106">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -348,9 +404,20 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="437" y="0" width="662" height="834" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1577288513623" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1576393903333">
+    <state x="511" y="40" key="refactoring.ChangeSignatureDialog" timestamp="1578537062248">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1576393903333" />
+    <state x="511" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1578537062248" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1580531089145">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1580531089145" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="i" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -9,7 +9,7 @@ public class GameFrame extends JFrame {
     private MyPanel gamePanel = null;
     public GameFrame(){
         setTitle("Tank game");
-        this.setSize(Const.WIN_WIDTH+15, Const.WIN_HEIGHT+38);
+        this.setSize(Const.WIN_WIDTH+15+200, Const.WIN_HEIGHT+38);
         this.setLayout(null);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -19,6 +19,7 @@ public class GameFrame extends JFrame {
         this.setVisible(true);
         this.addKeyListener(new KeyListener() {
             boolean up = false, down = false, left = false, right = false;
+            boolean fire = false;
             @Override
             public void keyTyped(KeyEvent keyEvent) {
 
@@ -40,7 +41,7 @@ public class GameFrame extends JFrame {
                         left = true;
                         break;
                     case KeyEvent.VK_SPACE:
-                        gamePanel.getTanks().get(0).fire();
+                        fire = true;
                         break;
                 }
                 setCurDir();
@@ -61,15 +62,22 @@ public class GameFrame extends JFrame {
                     case KeyEvent.VK_LEFT:
                         left = false;
                         break;
+                    case KeyEvent.VK_SPACE:
+                        fire = false;
+                        break;
                 }
                 setCurDir();
             }
 
             public void setCurDir(){
                 PlayerTank player = (PlayerTank) gamePanel.getTanks().get(0);
+                if(!fire) {
+                    player.setFiring(false);
+                }else {
+                    player.setFiring(true);
+                }
                 if(!up && !down && !right && !left){
                     player.setMoving(false);
-                    return;
                 }else {
                     // 如果开火间隔达不到直接return
                     if(up) player.setDir(Const.UP);
