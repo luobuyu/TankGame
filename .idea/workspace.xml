@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="添加子弹类，还在写，还未完成">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Explosion.java" afterDir="false" />
+    <list default="true" id="7de387b3-cbf9-4281-9e67-fcfe9824128f" name="Default Changelist" comment="基本完成，增加了血条&#10;剩下添加更多的敌人，掉落buff&#10;分数显示，击杀显示，剩余敌人，通关">
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/META-INF/Tanktest.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Birth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Explosion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MainWin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Prop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tanktest/view/Welcome.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/bgimg/gameover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/bgimg/pass.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/bgimg/welcome.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/bgimg/win.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/bullet_explosion1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/bullet_explosion2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/bullet_explosion3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/tank_explosion1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/tank_explosion1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/tank_explosion2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/tank_explosion3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/tank_explosion4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/explosion/tank_explosion5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/map/gameBg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/map/scorePanel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/map/star0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/map/star1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/map/star2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/map/star3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Birth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/MainWin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Prop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Welcome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/map/map1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/map/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/map/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/map/map4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Barrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Barrier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Bullet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Const.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/EnemyTank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/EnemyTank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/GameFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/MyPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/PlayerTank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/PlayerTank.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Tank.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tanktest/model/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tanktest/model/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/map/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/map/home.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Barrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Barrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Const.java" afterDir="false" />
@@ -33,6 +71,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -74,24 +113,14 @@
       <recent name="model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaProject\Tanktest\pictures\bgimg" />
+      <recent name="E:\JavaProject\Tanktest\src\model" />
+      <recent name="E:\JavaProject\Tanktest\pictures\map" />
+      <recent name="E:\JavaProject\Tanktest\pictures\prop" />
       <recent name="E:\JavaProject\Tanktest" />
-      <recent name="E:\JavaProject\Tanktest\pictures\tank" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GameFrame">
-    <configuration name="Barrier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.Barrier" />
-      <module name="Tanktest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CollDete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.CollDete" />
       <module name="Tanktest" />
@@ -131,6 +160,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainWin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.MainWin" />
+      <module name="Tanktest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.Test" />
       <module name="Tanktest" />
@@ -147,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameFrame" />
+        <item itemvalue="Application.MainWin" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.EnemyTank" />
         <item itemvalue="Application.CollDete" />
-        <item itemvalue="Application.Barrier" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +245,10 @@
       <workItem from="1580446031585" duration="835000" />
       <workItem from="1580452311656" duration="9089000" />
       <workItem from="1580528074365" duration="4136000" />
+      <workItem from="1580539169056" duration="15212000" />
+      <workItem from="1580617554224" duration="2572000" />
+      <workItem from="1580627816668" duration="15004000" />
+      <workItem from="1580705649353" duration="14138000" />
     </task>
     <task id="LOCAL-00001" summary="敌军坦克类">
       <created>1576674372340</created>
@@ -253,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578067437301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="基本完成，增加了血条&#10;剩下添加更多的敌人，掉落buff&#10;分数显示，击杀显示，剩余敌人，通关">
+      <created>1580539354904</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580539354904</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +334,8 @@
     <MESSAGE value="贴地图成功，但是像素大小有点问题" />
     <MESSAGE value="贴图完美，碰撞检测加入完美" />
     <MESSAGE value="添加子弹类，还在写，还未完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加子弹类，还在写，还未完成" />
+    <MESSAGE value="基本完成，增加了血条&#10;剩下添加更多的敌人，掉落buff&#10;分数显示，击杀显示，剩余敌人，通关" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本完成，增加了血条&#10;剩下添加更多的敌人，掉落buff&#10;分数显示，击杀显示，剩余敌人，通关" />
   </component>
   <component name="WindowStateProjectService">
     <state x="216" y="62" key="#GameFrame" timestamp="1576671096829">
@@ -304,14 +358,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1576671135903" />
+    <state x="526" y="207" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580647477430">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="526" y="207" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1580647477430" />
     <state x="295" y="135" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1576671087624">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="295" y="135" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.834@0.0.1536.834" timestamp="1576671087624" />
-    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1580531070181">
+    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1580724475290">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1580531070181" />
+    <state x="734" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1580724475290" />
     <state x="231" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576670982604">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -324,54 +382,58 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1576648644287" />
+    <state x="543" y="287" width="449" height="260" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580715239169">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="543" y="287" width="449" height="260" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1580715239169" />
     <state x="508" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1578672288296">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="508" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.834@0.0.1536.834" timestamp="1578672288296" />
-    <state x="370" y="0" key="CommitChangelistDialog2" timestamp="1578372860695">
+    <state x="370" y="0" key="CommitChangelistDialog2" timestamp="1580719337728">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="370" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1578372860695" />
+    <state x="370" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1580719337728" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1578572979839">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1578572979839" />
-    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1580539243073">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1580725601910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580725601910" />
     <state width="1877" height="138" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1580539243073">
+    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1580725601909">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
+    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1580725601909" />
     <state width="1877" height="138" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1580539243073">
+    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1580725601909">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
+    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1580725601909" />
     <state width="1877" height="138" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1580539243073">
+    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1580725601910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1580539243073" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1580725601910" />
     <state width="1877" height="138" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576943859672" />
-    <state width="1493" height="286" key="GridCell.Tab.1.bottom" timestamp="1580393484407">
+    <state width="1493" height="206" key="GridCell.Tab.1.bottom" timestamp="1580652107205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
-    <state width="1493" height="286" key="GridCell.Tab.1.center" timestamp="1580393484407">
+    <state width="1493" height="206" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580652107205" />
+    <state width="1493" height="206" key="GridCell.Tab.1.center" timestamp="1580652107205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
-    <state width="1493" height="286" key="GridCell.Tab.1.left" timestamp="1580393484407">
+    <state width="1493" height="206" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1580652107205" />
+    <state width="1493" height="206" key="GridCell.Tab.1.left" timestamp="1580652107205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
-    <state width="1493" height="286" key="GridCell.Tab.1.right" timestamp="1580393484407">
+    <state width="1493" height="206" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1580652107205" />
+    <state width="1493" height="206" key="GridCell.Tab.1.right" timestamp="1580652107205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1580393484407" />
+    <state width="1493" height="206" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1580652107205" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1576835459794">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -380,10 +442,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1578067446379" />
-    <state x="394" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1580539169832">
+    <state x="394" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1580705785183">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="394" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1580539169832" />
+    <state x="394" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1580705785183" />
     <state x="561" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576838427167">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -408,10 +470,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="511" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1578537062248" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1580531089145">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1580712324610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1580531089145" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1580712324610" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

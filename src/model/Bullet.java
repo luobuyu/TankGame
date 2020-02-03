@@ -88,7 +88,7 @@ public class Bullet {
         // 如果和障碍物碰撞
         for(Barrier barrier: this.getFather().getBarriers()){
             if(barrier.getType() > Const.canMove){
-                if(CollDete.isCollide(newX, newY, Const.width, barrier.getX(), barrier.getY(), Const.width)){
+                if(CollDete.isCollide(newX, newY, Const.width, barrier.getX(), barrier.getY(), barrier.getWidth())){
                     if (barrier.getType()==Const.brick||barrier.getType()==Const.home){
                         barrier.setAlive(false);
                     }
@@ -98,6 +98,7 @@ public class Bullet {
                 }
             }
         }
+
         // 如果和子弹碰撞
         for(int i = 0; i < this.getFather().getBullets().size(); i++) {
             Bullet bullet = this.getFather().getBullets().get(i);
@@ -109,6 +110,7 @@ public class Bullet {
                 }
             }
         }
+
         // 如果和坦克碰撞
         for (Tank tank: this.getFather().getTanks()){
             if(tank.getTankType()!=this.getBelongTo()){
@@ -116,6 +118,10 @@ public class Bullet {
                     tank.beAttacked(this.getDamage());
                     if(!tank.isAlive()) {
                         this.getFather().getExplosions().add(new Explosion(tank.getX(), tank.getY(), 0, this.getFather()));
+                    }
+                    if(this.getBulletType() == Const.BULLET_ICE) {
+                        tank.setSpeed(Const.Tank_DEC_SPEED);
+                        tank.setPropTime(System.currentTimeMillis(), Const.changeBullet);
                     }
                     this.setAlive(false);
                     this.getFather().getExplosions().add(new Explosion(this.getX(), this.getY(), 1, this.getFather()));

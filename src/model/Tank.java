@@ -16,6 +16,7 @@ public class Tank implements Attacked{
     private Random random;
     private long lastFireTime;
     private String[] img;
+    private long[] propTime;
 
     // 传入的是 敌人 、 玩家
     public Tank(int tankType, MyPanel father, int x, int y){
@@ -27,6 +28,7 @@ public class Tank implements Attacked{
         this.setFather(father);
         this.random = new Random();
         this.setLastFireTime(System.currentTimeMillis());
+        propTime = new long[]{0, 0, 0};
     }
 
     public void move(){
@@ -215,6 +217,14 @@ public class Tank implements Attacked{
 
     public void setImg(String[] img) {
         this.img = img;
+    }
+
+    public long[] getPropTime() {
+        return propTime;
+    }
+
+    public void setPropTime(long time, int type) {
+        this.propTime[type] = time;
     }
 
     @Override

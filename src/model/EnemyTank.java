@@ -1,14 +1,13 @@
 package model;
 
-import java.awt.*;
-
 public class EnemyTank extends Tank {
     private long lastChangeDirTime;
-
+    private int id;
     public EnemyTank(int tankType, MyPanel father, int x, int y) {
         super(tankType, father, x, y);
         // 这个id用来遍历的时候与自己分别开
-        this.setDir(Const.RIGHT);
+        this.setId(this.getFather().getTanks().size());
+        this.setDir(this.getRandom().nextInt(4) + 1);
         this.setSpeed(Const.TANK_NOR_SPEED);
         this.setBulletType(Const.BULLET_NOR);
         this.setLastChangeDirTime(System.currentTimeMillis());
@@ -32,15 +31,27 @@ public class EnemyTank extends Tank {
     }
 
     public int getDisOfAim() {
-        int aimX = this.getFather().getTanks().get(0).getX();
-        int aimY = this.getFather().getTanks().get(0).getY();
-        return (int) Math.sqrt(Math.pow(aimX - this.getX(), 2) + Math.pow(aimY - this.getY(), 2));
+        int[] aim = getAim();
+        return (int) Math.sqrt(Math.pow(aim[0] - this.getX(), 2) + Math.pow(aim[1] - this.getY(), 2));
+    }
+
+    public int[] getAim() {
+        int aimX, aimY;
+        if(this.getId() % 2 == 0) {
+            aimX = this.getFather().getTanks().get(0).getX();
+            aimY = this.getFather().getTanks().get(0).getY();
+        } else {
+            aimX = this.getFather().getBarriers().get(0).getX();
+            aimY = this.getFather().getBarriers().get(0).getY();
+        }
+        return new int[] {aimX, aimY};
     }
 
     public int changeDir() {
         int dir = this.getDir(); // 这是原来的方向
-        int aimX = this.getFather().getTanks().get(0).getX();
-        int aimY = this.getFather().getTanks().get(0).getY();
+        int[] aim = this.getAim();
+        int aimX = aim[0];
+        int aimY = aim[1];
         int dis = getDisOfAim();
         long t = System.currentTimeMillis();
 
@@ -67,6 +78,14 @@ public class EnemyTank extends Tank {
             this.setLastChangeDirTime(t);
         }
         return dir;
+    }
+
+    public void updateDecSpeed() {
+        long t = System.currentTimeMillis();
+        if(this.getPropTime()[0] != 0 && t - this.getPropTime()[0] > Const.last_time) {
+            this.setPropTime(0, Const.changeBullet);
+            this.setSpeed(Const.TANK_NOR_SPEED);
+        }
     }
 
 
@@ -170,6 +189,7 @@ public class EnemyTank extends Tank {
         int dir;
         int[] next;
         // 用来改变前进方向
+        this.updateDecSpeed();
         dir = this.changeDir();
         next = getMoveAim(dir);     // 得到下一个坐标数组
         if (canMove(next[0], next[1])) {
@@ -208,6 +228,15 @@ public class EnemyTank extends Tank {
             return false;
         }
 
+
+        // 判断和出生点相撞
+        for(int i = 0; i < this.getFather().getBirths().size(); i++) {
+            Birth birth = this.getFather().getBirths().get(i);
+            if(CollDete.isCollide(newX, newY, Const.TankWidth, birth.getX(), birth.getY(), Const.TankWidth)) {
+                return false;
+            }
+        }
+
         // 判断和其他的坦克碰撞
         // 2 号老是穿过 1 号
         for (int i = 0; i < this.getFather().getTanks().size(); i++) {
@@ -233,28 +262,8 @@ public class EnemyTank extends Tank {
         return true;
     }
 
-    public static int numOfBirthPlace(MyPanel father) {
-        int a = 0;
-        int b = 0;
-        for (Tank tank : father.getTanks()) {
-            if (CollDete.isCollide(0, 0, Const.TankWidth, tank.getX(), tank.getY(), Const.TankWidth)) {
-                a = 1;
-                continue;
-            }
-            if (CollDete.isCollide(47 * Const.TankWidth, 0, Const.TankWidth, tank.getX(), tank.getY(), Const.TankWidth)) {
-                b = 1;
-            }
-        }
-        if (a == 0 && b == 0) {
-            return 2;
-        } else if (a != 0 && b == 0) {
-            return 1;
-        } else if (a == 0) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
+
+
 
     public long getLastChangeDirTime() {
         return lastChangeDirTime;
@@ -264,4 +273,11 @@ public class EnemyTank extends Tank {
         this.lastChangeDirTime = lastChangeDirTime;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

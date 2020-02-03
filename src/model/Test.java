@@ -15,7 +15,8 @@ public class Test extends JFrame{
     int n = 1;
     //主函数
     public static void main(String[] args) {
-        System.out.println(100 * 1 / 2);
+        long[] time = new long[3];
+        time[1] = 100;
     }
     //使用构造器创建窗体并设置
 
